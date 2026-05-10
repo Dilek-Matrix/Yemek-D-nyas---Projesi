@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*attribute seçici*/
+        a[target="_blank"]{
+            color: red;
+
+        }
+        p[class="yazi"]{
+            color: red;
+
+        }
+        /* class^="yazi", class$="yazi" sonuyazi, class*=ya joker karakterler */
+        p[class$="yazi"]{
+            font-size: 40px;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <p class="yazi">Lorem ipsum dolor sit.</p>
+    <p class="sonyazi">Lorem ipsum dolor sit.</p>
+    <p class="yazialani">Lorem ipsum dolor sit.</p>
+    <a href="#" target="_blank">tıkla</a>
+    <a href="#" class="yazi">tıkla2</a>
+    <a href="" target="_self" class="yazialani">tıkla3</a>
+    
+
+
+
+
+
+
+
+
+</body>
+</html>

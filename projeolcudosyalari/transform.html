@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #kutu1,
+        #kutu2,
+        #kutu3{
+            width: 150px;
+            height: 350px;
+            margin-bottom: 50px;
+        }
+        #kutu1{
+            background-color: red;
+            /*transform: rotate(20deg); x ve y ekseninde çevirme yapar*/
+            /*transform: rotate3d(20deg,20deg,25deg);/* x,y ve z*/
+            /*transform: rotateZ(45deg);*/
+        }
+        #kutu1:hover{
+            transform: rotate(45deg)scale(0.5, 0.5);
+            transition: all 2s;
+        }
+        #kutu2{
+            background-color: yellow;
+            /*transform: scale(0.5, 2); /* boyutlandırma x, y */
+            /*transform: scaleY(0.5);*/
+            transform: translate(-100px, -200px); /* konumunu ayarlar*/
+        }
+        #kutu2{
+            /*transform: translate(200px);*/
+            animation-name: yuru;
+            animation-duration: 3s;
+        }
+        @keyframes yuru{
+            from{transform: translate(0px,200px);
+            }
+            to{
+                transform: translate(200px, 200px) scale(0.5, 0.5);
+            }
+
+        }
+        #kutu3{
+            background-color: blue;
+            /*transform: skewX(30deg);*/
+            /*transform:rotate(30deg) ;*/
+            /*transform: skew(40deg, 20deg);*/
+            margin-left: 200px;
+            /*transform: matrix(scalex,scaley,skewx,skexy,
+            translatex,translatey);*/
+            /*transform: matrix(0.5,40,40,20,80,80);*/
+            transform: perspective(-200px);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="kutu1"></div>
+    <div id="kutu2"></div>
+    <div id="kutu3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis veritatis reprehenderit maiores, facilis quae necessitatibus cum inventore, eos earum quisquam, unde possimus suscipit provident. Quo commodi totam quia corrupti qui.
+    Cumque quibusdam necessitatibus? Qui natus dolorum laudantium saepe perspiciatis harum explicabo neque deserunt eum.</div>
+    
+</body>
+</html>
